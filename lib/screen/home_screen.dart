@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _Header(
-                onPressed: onSettingsPop,
+                onPressed: onSettingsPressed,
               ),
               _Body(
                 randomNumbers: randomNumbers,
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void onSettingsPop() async {
+  void onSettingsPressed() async {
     // list - add
     // [HomeScreen(), SettingsScreen()]
     final int? result = await Navigator.of(context).push<int>(
